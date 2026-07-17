@@ -22,13 +22,22 @@ app.use(
   }),
 );
 
+app.use(async (req, res, next) => {
+  try {
+    await connectDb();
+    next();
+  } catch (err) {
+    res.status(500).json({ success: false, message: "Database connection failed" });
+  }
+});
+
 app.get("/", (req, res) => {
   res.send("My Server is Running");
 });
 
 app.use("/api/inquiry", inquiryRoutes);
 
-connectDb();
+
 
 const PORT = process.env.PORT || 8000;
 
