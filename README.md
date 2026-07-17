@@ -41,7 +41,7 @@ A modern, full-stack CRM landing page built with React and Express, designed to 
 ## 📁 Project Structure
 
 ```
-crm-project/
+
 ├── frontend/
 │   ├── src/
 │   │   ├── api/
@@ -77,17 +77,12 @@ crm-project/
 - npm or yarn
 - A MongoDB Atlas cluster (or local MongoDB instance)
 
-### 1. Clone the repositories
 
-```bash
-git clone https://github.com/your-username/crm-frontend.git
-git clone https://github.com/your-username/crm-backend.git
-```
 
 ### 2. Backend setup
 
 ```bash
-cd crm-backend
+cd backend
 npm install
 ```
 
@@ -104,19 +99,19 @@ Run the server:
 npm run dev
 ```
 
-Backend will run at `http://localhost:8000`
+Backend will run at `http://localhost:5000`
 
 ### 3. Frontend setup
 
 ```bash
-cd crm-frontend
+cd frontend
 npm install
 ```
 
 Create a `.env.development` file in the frontend root:
 
 ```env
-VITE_API_URL=http://localhost:8000/api
+VITE_API_URL=http://localhost:5000/api
 ```
 
 Run the dev server:
