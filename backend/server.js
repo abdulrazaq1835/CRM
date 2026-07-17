@@ -14,8 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true,
+    origin: ["http://localhost:5173",
+      "https://crm-58oq.vercel.app/"
+    ],
+      credentials: true,
+  
   }),
 );
 
